@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: san-mars-api
+
+  profiles:
+    active: local-dev
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: c##myintuser
+    password: myintuser
+    hikari:
+      validationTimeout: 300000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: none
+
+  servlet:
+    multipart:
+      enabled: false
+
+#jwt:
+#  secret: javainuse
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+
+
+
+info:
+  app:
+    description: "SAN MARS API"
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: INFO
+    org.flywaydb: INFO

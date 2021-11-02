@@ -1,0 +1,58 @@
+<div id="containerId" class="nasa-container-centered landing-container-background">
+  <div class="col-md-12">
+    <div class="row page-block ">
+      <div class="center">
+        <form class="form-margin ">
+          <div class="row header-welcome">Mars Rover Portal</div>
+          <label class="input-label">{{plateauLabel}}</label>
+          <div class="row text-margin">
+            <input id="txtPlateauPosition" class="form-input"
+                   placeholder="No.row, No.col" [tabindex]="1" autofocus
+                   maxlength="7" autocomplete="off"
+                   (keypress)="isNumeric($event.key)"
+                   [ngClass]="!plateauErr? 'valid-input': 'invalid-input'"
+                   [(ngModel)]="plateauPosition" name="oplateauPosition"
+                   [disabled]="initiateProject">
+          </div>
+          <div class="row button-margin">
+            <button id="btnExecPlateau" class="action-btn"
+                    [ngClass]="!initiateProject? 'action-btn-enabled' : 'action-btn-disabled'"
+                    (click)="createPlateau(plateauPosition)">
+              {{buttonPlateauLabel}}
+            </button>
+          </div>
+          <label class="input-label">{{roverLabel}}</label>
+          <div>
+            <span class="info-icon-rover" (click)="showInfoText(showInfo)"></span>
+            <span class="info-label" *ngIf="showInfo">e.g: 1 2 ELRMLR</span>
+          </div>
+          <div class="row text-margin">
+            <textarea id="txtRoverCommands" class="form-input-rover"
+                      placeholder="Type Rover Command here" [tabindex]="2" autofocus
+                      maxlength="100" autocomplete="off"
+                      [disabled]="!enableRoverInput"
+                      (keypress)="isCorrectChar($event.key)"
+                      [ngClass]="!roverErr? 'valid-input': 'invalid-input'"
+                      [(ngModel)]="roverCommand" name="oroverCommand"></textarea>
+          </div>
+          <div class="row button-margin">
+            <button id="btnExecCall" class="action-btn"
+                    [ngClass]="enableRoverInput? 'action-btn-enabled' : 'action-btn-disabled'"
+                    (click)="triggerRoverCommand(roverCommand)">
+              {{buttonRoverLabel}}
+            </button>
+          </div>
+          <div class="separator"></div>
+          <div class="row">
+            <label class="input-label">{{roverMoveLabel}}</label>
+            <div class="row text-margin" *ngFor="let roverDetail of roverDetails;let i = index">
+              <div id="divRoverMove" class="form-display-rover">
+                {{roverDetail.roverX}} {{roverDetail.roverY}} {{roverDetail.roverFacing}}
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

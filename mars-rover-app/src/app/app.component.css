@@ -1,0 +1,150 @@
+.nasa-container-centered {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.header-welcome {
+  color: black;
+  font-family: Lato-Bold;
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: Calibri;
+  margin-bottom: 20px;
+  line-height: 32px;
+}
+
+.separator {
+  height: 1px;
+  width: 94%;
+  border: 1px #dfdfdf;
+  background: #dfdfdf;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  font-size: 14px;
+  padding-left: 7px;
+  box-sizing: border-box;
+  height: 30px;
+  width: 191px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  outline: 0 !important;
+  position: relative;
+}
+
+.form-input-rover {
+  font-size: 16px;
+  font-family: Calibri;
+  padding-left: 7px;
+  box-sizing: border-box;
+  width: 191px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  outline: 0 !important;
+  position: relative;
+}
+.form-display-rover {
+  font-size: 16px;
+  font-family: Calibri;
+  padding-left: 7px;
+  font-weight: bold;
+  color: aliceblue;
+  box-sizing: border-box;
+  width: 191px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.form-input:focus {
+  border: 1px solid black;
+}
+
+.page-block {
+  height: 100vh;
+}
+
+.text-margin {
+  margin-top: 12px;
+}
+
+.button-margin {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  color: black;
+  padding-left: 0px;
+  font-family: Calibri;
+  font-size: 20px;
+}
+
+.valid-input {
+  border: 1px solid #CBCBCB;
+}
+
+.invalid-input {
+  border: 2px solid #DC143C;
+}
+
+.action-btn {
+  border-radius: 4px;
+  text-align: center;
+}
+
+.action-btn:focus {
+  outline: 0 !important;
+}
+
+.action-btn-enabled {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.action-btn-enabled:hover {
+  transition: all 0.5s ease-in-out;
+}
+
+.action-btn-enabled:focus {
+  transition: all 0.5s ease-in-out;
+}
+
+.action-btn-disabled {
+  background-color: #E7E7E7;
+  cursor: not-allowed;
+  transition: all 0.5s ease-in-out;
+}
+
+.landing-container-background {
+  background-image: url('../assets/images/at-the-earth-background.jpg');
+  background-position: right;
+  background-size: cover;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.form-margin {
+  margin-top: 100px;
+  width: 50%;
+}
+
+.info-icon-rover {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  background-image: url("../assets/icons/ic-info-white-outline.svg");
+}
+
+.info-label {
+  color: darkslategrey;
+  padding-left: 5px;
+  font-family: Calibri;
+  font-size: 12px;
+}
